@@ -1,19 +1,18 @@
 {
 	"name": "subscription-tasks-api",
-	"version": "0.0.0",
-	"private": true,
+	"version": "1.0.0",
+	"description": "API for Telegram subscription tasks",
+	"main": "dist/index.js",
 	"scripts": {
-		"deploy": "wrangler deploy",
-		"dev": "wrangler dev",
-		"start": "wrangler dev",
-		"test": "vitest",
-		"cf-typegen": "wrangler types"
+	  "dev": "wrangler dev src/index.ts",
+	  "deploy": "wrangler deploy src/index.ts"
+	},
+	"dependencies": {
+	  "itty-router": "^3.0.12"
 	},
 	"devDependencies": {
-		"@cloudflare/vitest-pool-workers": "^0.7.5",
-		"@cloudflare/workers-types": "^4.20250423.0",
-		"typescript": "^5.5.2",
-		"vitest": "~3.0.7",
-		"wrangler": "^4.13.0"
+	  "@cloudflare/workers-types": "^4.20230518.0",
+	  "typescript": "^5.0.4",
+	  "wrangler": "^3.0.0"
 	}
-}
+  }
